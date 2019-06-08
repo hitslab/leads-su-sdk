@@ -93,7 +93,7 @@ class ConnectedOffersRequest extends AbstractListRequest
     }
 
     /**
-     * @return \Hitslab\LeadsSuSDK\Response\OffersResponse
+     * @return object|\Hitslab\LeadsSuSDK\Response\OffersResponse
      * @throws \Hitslab\LeadsSuSDK\Exception\ApiErrorException
      * @throws \Hitslab\LeadsSuSDK\Exception\BadResponseException
      * @throws \Hitslab\LeadsSuSDK\Exception\SdkException

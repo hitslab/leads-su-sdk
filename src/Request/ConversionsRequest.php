@@ -189,7 +189,7 @@ class ConversionsRequest extends AbstractListRequest
     }
 
     /**
-     * @return \Hitslab\LeadsSuSDK\Response\ConversionsResponse
+     * @return object|\Hitslab\LeadsSuSDK\Response\ConversionsResponse
      * @throws \Hitslab\LeadsSuSDK\Exception\ApiErrorException
      * @throws \Hitslab\LeadsSuSDK\Exception\BadResponseException
      * @throws \Hitslab\LeadsSuSDK\Exception\SdkException

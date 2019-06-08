@@ -67,6 +67,16 @@ class ApiClient
         $responseData = json_decode($responseBody, true);
 
         if (json_last_error() !== JSON_ERROR_NONE || empty($responseData['status'])) {
+
+            if (!empty($responseData['error_msg'])) {
+                throw new ApiErrorException(
+                    $responseData['error_msg'],
+                    null,
+                    [],
+                    !empty($responseData['error_code']) ? (int)$responseData['error_code'] : 0
+                );
+            }
+
             throw new BadResponseException("Неизвестный формат тела ответа", $responseInfo["http_code"]);
         }
 
