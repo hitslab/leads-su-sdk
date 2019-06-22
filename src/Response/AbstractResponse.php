@@ -2,7 +2,7 @@
 
 namespace Hitslab\LeadsSuSDK\Response;
 
-class AbstractSuccessResponse
+class AbstractResponse
 {
     /**
      * @var string
@@ -30,7 +30,7 @@ class AbstractSuccessResponse
     public $offset;
 
     /**
-     * @var array|object
+     * @var array
      */
     public $data;
 }

@@ -4,7 +4,7 @@ namespace Hitslab\LeadsSuSDK\Response;
 
 use Hitslab\LeadsSuSDK\Entity\Offer;
 
-class OffersResponse extends AbstractSuccessResponse
+class OffersResponse extends AbstractResponse
 {
     /**
      * @var Offer[]

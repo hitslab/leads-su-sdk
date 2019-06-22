@@ -10,7 +10,7 @@ use Hitslab\LeadsSuSDK\Response\OffersResponse;
  *
  * Документация https://webmaster.leads.su/tools/api/offers#actionConnectedPlatforms-detail
  */
-class ConnectedOffersRequest extends AbstractListRequest
+class ConnectedOffersRequest extends AbstractCollectionRequest
 {
     protected $object = "offers";
     protected $method = "connectedPlatforms";

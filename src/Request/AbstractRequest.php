@@ -4,7 +4,8 @@ namespace Hitslab\LeadsSuSDK\Request;
 
 use Doctrine\Common\Annotations\AnnotationReader;
 use Hitslab\LeadsSuSDK\ApiClient;
-use Hitslab\LeadsSuSDK\Response\AbstractSuccessResponse;
+use Hitslab\LeadsSuSDK\Response\AbstractCollectionResponse;
+use Hitslab\LeadsSuSDK\Response\AbstractResponse;
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
@@ -31,11 +32,11 @@ abstract class AbstractRequest
 
     public function getResponseClass()
     {
-        return AbstractSuccessResponse::class;
+        return AbstractResponse::class;
     }
 
     /**
-     * @return object
+     * @return AbstractResponse
      * @throws \Hitslab\LeadsSuSDK\Exception\SdkException
      * @throws \Hitslab\LeadsSuSDK\Exception\ApiErrorException
      * @throws \Hitslab\LeadsSuSDK\Exception\BadResponseException
@@ -54,7 +55,7 @@ abstract class AbstractRequest
     /**
      * @param string $json
      * @param string $class
-     * @return object
+     * @return AbstractResponse
      * @throws \Doctrine\Common\Annotations\AnnotationException
      */
     public function deserialize($json, $class)

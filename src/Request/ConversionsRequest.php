@@ -9,7 +9,7 @@ use Hitslab\LeadsSuSDK\Response\ConversionsResponse;
  *
  * Документация https://webmaster.leads.su/tools/api/conversions
  */
-class ConversionsRequest extends AbstractListRequest
+class ConversionsRequest extends AbstractCollectionRequest
 {
     protected $object = "conversions";
 
